@@ -29,3 +29,12 @@ CREATE TABLE addresstypes(
     id SERIAL PRIMARY KEY,
     addresstype VARCHAR(40) NOT NULL UNIQUE
 );
+
+CREATE TABLE products(
+    id SERIAL PRIMARY KEY,
+    itemNumber VARCHAR(15) NOT NULL UNIQUE,
+    itemName VARCHAR(80) NOT NULL,
+    pricePerKg DECIMAL NOT NULL,
+    supplier_id INTEGER NOT NULL,
+    CONSTRAINT fk_suppliers FOREIGN KEY(supplier_id) REFERENCES suppliers(id)
+);

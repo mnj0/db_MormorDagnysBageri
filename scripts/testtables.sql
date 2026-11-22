@@ -13,3 +13,22 @@ SELECT products.itemName, suppliers.supplierName, products.itemNumber, products.
 FROM products
 INNER JOIN suppliers ON suppliers.id = products.supplier_id
 ORDER BY suppliers.supplierName;
+
+--antal produkter i lager
+SELECT products.itemName, inventory.quantity
+FROM inventory
+INNER JOIN products ON products.id = inventory.product_id;
+
+--ingredienser i recept
+SELECT recipes.recipeName, products.itemName
+FROM recipeingredients
+INNER JOIN recipes ON recipes.id = recipeingredients.recipe_id
+INNER JOIN products ON products.id = recipeingredients.product_id
+ORDER BY recipes.recipeName;
+
+--beställa från vad med ett recept.
+SELECT products.itemName, suppliers.supplierName, suppliers.phone, suppliers.email
+FROM recipeingredients
+INNER JOIN products ON products.id = recipeingredients.product_id
+INNER JOIN suppliers ON suppliers.id = products.supplier_id
+WHERE recipeingredients.recipe_id = 1;

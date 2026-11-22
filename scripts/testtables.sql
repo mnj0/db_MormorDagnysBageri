@@ -27,8 +27,9 @@ INNER JOIN products ON products.id = recipeingredients.product_id
 ORDER BY recipes.recipeName;
 
 --beställa från vad med ett recept.
-SELECT products.itemName, suppliers.supplierName, suppliers.phone, suppliers.email
+SELECT recipes.recipeName, products.itemName, suppliers.supplierName, suppliers.phone, suppliers.email
 FROM recipeingredients
+INNER JOIN recipes ON recipes.id = recipeingredients.recipe_id
 INNER JOIN products ON products.id = recipeingredients.product_id
 INNER JOIN suppliers ON suppliers.id = products.supplier_id
-WHERE recipeingredients.recipe_id = 1;
+WHERE recipes.recipeName = 'Cinnamon bun';

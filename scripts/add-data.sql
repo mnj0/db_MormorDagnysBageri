@@ -174,3 +174,21 @@ INSERT INTO inventory(
     30
 );
 
+INSERT INTO recipies(
+    recipeName
+)VALUES(
+    'Cinnamon bun'
+),(
+    'Cardamom bun'
+),(
+    'Wheat bread'
+),(
+    'Rye bread'
+),(
+    'Oat cookie'
+),(
+    'Sponge cake'
+),(
+    'Cream cheese pastry'
+);
+

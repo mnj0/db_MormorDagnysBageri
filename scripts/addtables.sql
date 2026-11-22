@@ -46,4 +46,7 @@ CREATE TABLE inventory(
     quantity INT NOT NULL
 );
 
-CREATE TABLE recipies   
+CREATE TABLE recipies(
+    id SERIAL PRIMARY KEY,
+    recipeName VARCHAR(30)
+);

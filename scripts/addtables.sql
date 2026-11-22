@@ -46,7 +46,14 @@ CREATE TABLE inventory(
     quantity INT NOT NULL
 );
 
-CREATE TABLE recipies(
+CREATE TABLE recipes(
     id SERIAL PRIMARY KEY,
     recipeName VARCHAR(30)
+);
+
+CREATE TABLE recipeingredients(
+    recipe_id INTEGER NOT NULL,
+    CONSTRAINT fk_recipies FOREIGN KEY(recipe_id) REFERENCES recipes(id),
+    product_id INTEGER NOT NULL,
+    CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products(id)
 );

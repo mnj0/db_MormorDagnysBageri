@@ -174,7 +174,7 @@ INSERT INTO inventory(
     30
 );
 
-INSERT INTO recipies(
+INSERT INTO recipes(
     recipeName
 )VALUES(
     'Cinnamon bun'
@@ -190,5 +190,74 @@ INSERT INTO recipies(
     'Sponge cake'
 ),(
     'Cream cheese pastry'
+);
+
+INSERT INTO recipeingredients(
+    recipe_id,
+    product_id
+)VALUES(
+    1, 4
+),(
+    1, 1
+),(
+    1, 2
+),(
+    1, 7
+),(
+    1, 8
+),(
+    1, 11
+),(
+    2, 4
+),(
+    2, 1
+),(
+    2, 2
+),(
+    2, 7
+),(
+    2, 9
+),(
+    2, 11
+),(
+    3, 4
+),(
+    3, 2
+),(
+    3, 11
+),(
+    4, 5
+),(
+    4, 4
+),(
+    4, 2
+),(
+    4, 11
+),(
+    5, 6
+),(
+    5, 1
+),(
+    5, 7
+),(
+    5, 10
+),(
+    6, 4
+),(
+    6, 7
+),(
+    6, 10
+),(
+    6, 1
+),(
+    7, 4
+),(
+    7, 1
+),(
+    7, 12
+),(
+    7, 7
+),(
+    7, 10
 );
 

@@ -59,3 +59,9 @@ INSERT INTO addresstypes(
     3,
     'Visiting'
 );
+
+INSERT INTO supplieraddresses (address_id, supplier_id, addresstype_id) VALUES
+(1, 1, 1),  
+(2, 2, 1),  
+(3, 3, 1),  
+(4, 4, 1);  

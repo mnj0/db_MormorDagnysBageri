@@ -38,3 +38,12 @@ CREATE TABLE products(
     supplier_id INTEGER NOT NULL,
     CONSTRAINT fk_suppliers FOREIGN KEY(supplier_id) REFERENCES suppliers(id)
 );
+
+CREATE TABLE inventory(
+    id SERIAL PRIMARY KEY,
+    product_id INTEGER NOT NULL,
+    CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products(id),
+    quantity INT NOT NULL
+);
+
+CREATE TABLE recipies   
